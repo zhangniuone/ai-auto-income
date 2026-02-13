@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= category %>分类的文章列表">
+  <title><%= category %> - 文章分类</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo"><%= siteName %></a>
+    </div>
+  </header>
+
+  <main class="main container">
+    <h1>分类：<%= category %></h1>
+    
+    <div class="articles-grid">
+      <% articles.forEach(function(article) { %>
+      <article class="article-card">
+        <a href="/article/<%= article.slug %>" class="article-link">
+          <h2 class="article-title"><%= article.title %></h2>
+          <p class="article-summary"><%= article.summary ? article.summary.slice(0, 150) + '...' : '' %></p>
+        </a>
+      </article>
+      <% }); %>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 <%= siteName %></p>
+    </div>
+  </footer>
+</body>
+</html>

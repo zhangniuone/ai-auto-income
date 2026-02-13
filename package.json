@@ -1,0 +1,46 @@
+{
+  "name": "ai-auto-income",
+  "version": "1.0.0",
+  "description": "全自动内容变现系统 - 24小时被动收入",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "crawl": "node src/crawler/index.js",
+    "write": "node src/writer/index.js",
+    "publish": "node src/publisher/index.js"
+  },
+  "keywords": [
+    "passive-income",
+    "content-automation",
+    "seo",
+    "ai-writing",
+    "adsense",
+    "affiliate"
+  ],
+  "author": "Auto Income Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^21.5.0",
+    "cheerio": "^1.0.0-rc.12",
+    "axios": "^1.6.0",
+    "node-cron": "^3.0.3",
+    "pg": "^8.11.0",
+    "redis": "^4.6.0",
+    "winston": "^3.11.0",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "xml2js": "^0.6.2",
+    "rss-parser": "^3.13.0",
+    "natural": "^6.10.0",
+    "compression": "^1.7.4",
+    "helmet": "^7.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
